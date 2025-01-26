@@ -158,9 +158,8 @@ class LLMEvaluator {
     var modelInfo = ""
     var stat = ""
 
-    /// This controls which model loads. `phi3_5_4bit` is one of the smaller ones, so this will fit on
-    /// more devices.
-    let modelConfiguration = ModelRegistry.phi3_5_4bit
+    /// This controls which model loads. Using DeepSeek R1 Distill model
+    let modelConfiguration = ModelRegistry.deepseekR1DistillQwen
 
     /// parameters controlling the output
     let generateParameters = GenerateParameters(temperature: 0.6)

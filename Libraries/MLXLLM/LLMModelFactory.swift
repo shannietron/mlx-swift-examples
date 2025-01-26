@@ -144,6 +144,12 @@ public class ModelRegistry: @unchecked Sendable {
         defaultPrompt: "why is the sky blue?"
     )
 
+    static public let deepseekR1DistillQwen = ModelConfiguration(
+        id: "mlx-community/DeepSeek-R1-Distill-Qwen-1.5B",
+        overrideTokenizer: "PreTrainedTokenizer",
+        defaultPrompt: "Explain how neural networks work."
+    )
+
     static public let openelm270m4bit = ModelConfiguration(
         id: "mlx-community/OpenELM-270M-Instruct",
         // https://huggingface.co/apple/OpenELM
@@ -173,6 +179,7 @@ public class ModelRegistry: @unchecked Sendable {
     private static func all() -> [ModelConfiguration] {
         [
             codeLlama13b4bit,
+            deepseekR1DistillQwen,
             gemma2bQuantized,
             gemma_2_2b_it_4bit,
             gemma_2_9b_it_4bit,
